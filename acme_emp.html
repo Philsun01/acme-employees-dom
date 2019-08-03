@@ -15,6 +15,15 @@
       { id: 8, name: 'shep Jr'},
       { id: 99, name: 'lucy'}
     ];
+
+    const toggleFavorite = (employees,id)=> {
+      const employee = employees.find(employee=>employee.id=== id);
+      employee.isFavorite = !employee.isFavorite;
+
+    }
+    console.log(toggleFavorite(employees,1));
+    console.log(employees);
+
     </script>
   </body>
 </html>
