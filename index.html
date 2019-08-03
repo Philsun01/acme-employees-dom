@@ -1,0 +1,56 @@
+<html>
+  <head>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300&display=swap" rel="stylesheet">
+<style>
+
+</style>
+  </head>
+  <body>
+    <div id='container'>
+    <h1 id='title'>Acme Employees DOM</h1>
+    <div>Choose your three favorites employees.</div>
+
+    <div id='employee-list'>
+    </div>
+
+    <div id='keys'>
+      <div class='key'>
+        Favorite:
+        <div class='swatch favorite'/>
+        <ul>
+
+        </ul>
+
+
+      </div>
+    </div>
+      </div>
+  <script>
+    const employees = [
+    { id: 1, name: 'moe'},
+    { id: 2, name: 'larry', managerId: 1},
+    { id: 4, name: 'shep', managerId: 2},
+    { id: 3, name: 'curly', managerId: 1},
+    { id: 5, name: 'groucho', managerId: 3},
+    { id: 6, name: 'harpo', managerId: 5},
+    { id: 8, name: 'shep Jr.', managerId: 4},
+    { id: 99, name: 'lucy', managerId: 1}
+  ];
+
+  const names = employees.map(obj=> obj.name);
+  console.log(names);
+
+  const ul = document.querySelector('ul');
+  ul.innerHTML = "<li>moe</li><li>larry</li><li>shep</li><li>curly</li><li>groucho</li><li>harpo</li><li>shep Jr</li><li>lucy</li>";
+
+  ul.addEventListener('click', (ev)=>{
+    ev.target.stylecolor = "blue";
+
+  });
+
+
+
+
+  </script>
+  </body>
+</html>
